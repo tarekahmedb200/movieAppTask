@@ -8,18 +8,18 @@
 import Foundation
 
 
-struct Result : Codable {
+struct ResponseResult : Codable {
     
-    var page  : Int
+    var page : Int
     var totalPages : Int
     var totalResults : Int
-    var media : [Movie]
+    var movies : [Movie]
     
     enum CodingKeys : String , CodingKey {
         case page
         case totalPages = "total_pages"
         case totalResults = "total_results"
-        case media = "results"
+        case movies = "results"
     }
     
 }

@@ -17,3 +17,14 @@ extension UIImageView {
         self.kf.setImage(with: movieDBURL.getPosterImage(path: path).url)
     }
 }
+
+extension UIView {
+    func dropShadow(scale: Bool = true) {
+        layer.shadowColor = UIColor.systemGray.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 0)
+        layer.shadowOpacity = 0.7
+        layer.shadowRadius = 5.0
+        layer.masksToBounds = false
+        layer.cornerRadius = 10.0
+    }
+}
